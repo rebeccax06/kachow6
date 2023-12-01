@@ -1,4 +1,4 @@
-package com.sunayanpradhan.quizapp
+package com.rxiong.quizapp
 
 data class QuestionModel(val question:String,
                          val option1:String,

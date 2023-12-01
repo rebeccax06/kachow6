@@ -1,7 +1,6 @@
-package com.sunayanpradhan.quizapp
+package com.rxiong.quizapp
 
 import android.content.Intent
-import android.content.res.Resources
 import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.TextView

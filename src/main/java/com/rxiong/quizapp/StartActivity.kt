@@ -1,4 +1,4 @@
-package com.sunayanpradhan.quizapp
+package com.rxiong.quizapp
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

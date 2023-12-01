@@ -1,4 +1,4 @@
-package com.sunayanpradhan.quizapp
+package com.rxiong.quizapp
 
 import org.junit.Test
 
