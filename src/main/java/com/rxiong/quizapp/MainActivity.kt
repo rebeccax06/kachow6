@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun countdown(){
-        var duration:Long=TimeUnit.SECONDS.toMillis(15)
+        var duration:Long=TimeUnit.SECONDS.toMillis(5)
 
 
         object :CountDownTimer(duration, 1000) {
@@ -175,13 +175,13 @@ class MainActivity : AppCompatActivity() {
         option3.background=resources.getDrawable(R.drawable.option_bg)
         option4.background=resources.getDrawable(R.drawable.option_bg)
     }
-     fun option1Clicked(view:View){
-         disableButton()
+    fun option1Clicked(view:View){
+        disableButton()
         if(questionModel.option1==questionModel.answer){
             option1.background=resources.getDrawable(R.drawable.right_bg)
 
 
-                correctAns(option1)
+            correctAns(option1)
 
         }
         else{
@@ -195,7 +195,7 @@ class MainActivity : AppCompatActivity() {
             option2.background=resources.getDrawable(R.drawable.right_bg)
 
 
-               correctAns(option2)
+            correctAns(option2)
 
         }
         else{
@@ -209,7 +209,7 @@ class MainActivity : AppCompatActivity() {
             option3.background=resources.getDrawable(R.drawable.right_bg)
 
 
-                correctAns(option3)
+            correctAns(option3)
 
 
         }
@@ -223,7 +223,7 @@ class MainActivity : AppCompatActivity() {
             option4.background=resources.getDrawable(R.drawable.right_bg)
 
 
-               correctAns(option4)
+            correctAns(option4)
 
         }
         else{
@@ -235,7 +235,7 @@ class MainActivity : AppCompatActivity() {
 
         if (backPressedTime + 2000 > System.currentTimeMillis()) {
             backToast?.cancel()
-           finish()
+            finish()
         }
 
         else {
