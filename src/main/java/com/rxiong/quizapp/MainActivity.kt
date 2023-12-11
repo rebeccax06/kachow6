@@ -53,12 +53,29 @@ class MainActivity : AppCompatActivity() {
 
 
         questionsList= ArrayList()
-        questionsList.add(QuestionModel("What is actually electricity?","A flow of water","A flow of air","A flow of electrons"," A flow of atoms","A flow of electrons"))
-        questionsList.add(QuestionModel("What is the speed of sound?","120 km/h","1,200 km/h","400 km/h","700 km/h","1,200 km/h"))
-        questionsList.add(QuestionModel("What is the main component of the sun?","Liquid lava","Gas","Molten iron","Rock","Gas"))
-        questionsList.add(QuestionModel("Which of the following animals can run the fastest?","Cheetah","Leopard","Tiger","Lion","Cheetah"))
-        questionsList.add(QuestionModel("Which company is known for publishing the Mario video game?","Xbox","Nintendo","SEGA","Electronic Arts","Nintendo"))
-
+        questionsList.add(QuestionModel("What was the highest-grossing movie of the past year?","Avengers: Endgame","Spider-Man: No Way Home","Barbie"," Oppenheimer","Barbie"))
+        questionsList.add(QuestionModel("Who won the Academy Award for Best Actor in the 2023 Oscars ceremony?","Joaquin Phoenix","Anthony Hopkins","Leonardo DiCaprio","Brendan Fraser","Brendan Fraser"))
+        questionsList.add(QuestionModel("Which streaming platform is home to the TV series \"Stranger Things\"?","Netflix","Hulu","Amazon Prime Video","Disney+","Netflix"))
+        questionsList.add(QuestionModel("What artist or band sang the song \"Blinding Lights\"?","Taylor Swift","Billie Eilish","The Weeknd"," BTS","The Weeknd"))
+        questionsList.add(QuestionModel("What major cultural event occurs annually in San Diego and is known for its focus on comics, movies, and TV shows?","Cannes Media Festival","Sundance Arts Festival","Comic-Con International","SXSW","Comic-Con International"))
+        questionsList.add(QuestionModel("Which film won the Best Picture category at the most recent Oscars?","Parasite","Everything Everywhere All At Once","The Shape of Water","La La Land","Everything Everywhere All At Once"))
+        questionsList.add(QuestionModel("In which year was the first episode of the TV series \"Friends\" aired?","1994","1996","1998","2000","1994"))
+        questionsList.add(QuestionModel("Which classic novel was adapted into a popular TV series featuring Henry Cavill as the lead character?","The Witcher","Game of Thrones","Outlander","The Handmaid's Tale","The Witcher"))
+        questionsList.add(QuestionModel("Who is known for their role as Wanda Maximoff in the Marvel Cinematic Universe?","Scarlett Johansson","Elizabeth Olsen","Brie Larson","Gal Gadot","Elizabeth Olsen"))
+        questionsList.add(QuestionModel("What social media platform is famous for its short-form video content and is particularly popular among younger audiences?","Twitter","Snapchat","TikTok","Instagram","TikTok"))
+        questionsList.add(QuestionModel("Who played the lead role in the 2019 film \"Joker\"?","Leonardo DiCaprio","Joaquin Phoenix","Robert Pattinson","Tom Hardy","Joaquin Phoenix"))
+        questionsList.add(QuestionModel("Which of the following is a song by Billie Eilish?","Shape of You","Bad Guy","Old Town Road","Uptown Funk","Bad Guy"))
+        questionsList.add(QuestionModel("Who won the Album of the Year at the 2020 Grammy Awards?","Taylor Swift","Beyoncé","Adele","Bruno Mars","Taylor Swift"))
+        questionsList.add(QuestionModel("Who directed the film \"La La Land\" (2016)?","Christopher Nolan","Damien Chazelle","Quentin Tarantino","Steven Spielberg","Damien Chazelle"))
+        questionsList.add(QuestionModel("What is the title of Taylor Swift's debut album?","Fearless","Speak Now","Taylor Swift","Red","Taylor Swift"))
+        questionsList.add(QuestionModel("Which actress played the character Katniss Everdeen in \"The Hunger Games\" film series?","Emma Watson","Jennifer Lawrence","Kristen Stewart","Scarlett Johansson","Jennifer Lawrence"))
+        questionsList.add(QuestionModel("Who is the lead vocalist of the band Coldplay?","Chris Martin","Thom Yorke","Bono","Eddie Vedder","Chris Martin"))
+        questionsList.add(QuestionModel("Who played the character Jack Dawson in the film \"Titanic\"?","Leonardo DiCaprio","Tom Hanks","Johnny Depp","Brad Pitt","Leonardo DiCaprio"))
+        questionsList.add(QuestionModel("Which pop star is known for her alter ego \"Sasha Fierce\"?","Rihanna","Lady Gaga","Beyoncé","Katy Perry","Beyoncé"))
+        questionsList.add(QuestionModel("What is the name of the fictional wizarding sport played on broomsticks in the \"Harry Potter\" series?","Quidditch","Bludgerball","Wizardball","Broomstick Polo","Quidditch"))
+        questionsList.add(QuestionModel("Who played Peeta Mellark in the “Hunger Games” franchise?","Leonardo DiCaprio","Liam Hemsworth","Josh Hutcherson","Chris Hemsworth","Josh Hutcherson"))
+        questionsList.add(QuestionModel("Which animated film features a character named Simba?","Shrek","The Lion King","Finding Nemo","Aladdin","The Lion King"))
+        questionsList.add(QuestionModel("What is the name of the fictional city in which Batman operates?","Gotham City","Metropolis","Central City","Star City","Gotham City"))
 
         //questionsList.shuffle()
         questionModel= questionsList[index]
@@ -80,7 +97,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun countdown(){
-        var duration:Long=TimeUnit.SECONDS.toMillis(5)
+        var duration:Long=TimeUnit.SECONDS.toMillis(8)
 
 
         object :CountDownTimer(duration, 1000) {
