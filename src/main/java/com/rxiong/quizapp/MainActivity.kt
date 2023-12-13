@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         questionsList.add(QuestionModel("Which animated film features a character named Simba?","Shrek","The Lion King","Finding Nemo","Aladdin","The Lion King"))
         questionsList.add(QuestionModel("What is the name of the fictional city in which Batman operates?","Gotham City","Metropolis","Central City","Star City","Gotham City"))
 
-        //questionsList.shuffle()
+        questionsList.shuffle()
         questionModel= questionsList[index]
 
         setAllQuestions()
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun countdown(){
-        var duration:Long=TimeUnit.SECONDS.toMillis(8)
+        var duration:Long=TimeUnit.SECONDS.toMillis(7)
 
 
         object :CountDownTimer(duration, 1000) {
@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity() {
             }
             override fun onFinish() {
                 index++
-                if (index<questionsList.size){
+                if (index<5){
                     questionModel=questionsList[index]
                     setAllQuestions()
                     resetBackground()
@@ -160,7 +160,7 @@ class MainActivity : AppCompatActivity() {
         var intent=Intent(this,ResultActivity::class.java)
 
         intent.putExtra("correct",correctAnswerCount.toString())
-        intent.putExtra("total",questionsList.size.toString())
+        intent.putExtra("total","5")
 
         startActivity(intent)
     }
