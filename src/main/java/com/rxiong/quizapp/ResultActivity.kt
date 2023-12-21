@@ -2,6 +2,7 @@ package com.rxiong.quizapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +13,7 @@ class ResultActivity : AppCompatActivity() {
     lateinit var totalAns:TextView
     lateinit var performance:TextView
     lateinit var output:LinearLayout
-
+    lateinit var back_home: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
@@ -30,6 +31,11 @@ class ResultActivity : AppCompatActivity() {
         totalAns.text=totalAnsNo
 
         val percentage= (correctAnsNo?.toFloat()?.div(totalAnsNo?.toFloat()!!))?.times(100)
+        back_home=findViewById(R.id.back_home)
+        back_home.setOnClickListener {
+            var intent= Intent(this,StartActivity::class.java)
+            startActivity(intent)
+        }
 
         if (percentage != null) {
             when {
