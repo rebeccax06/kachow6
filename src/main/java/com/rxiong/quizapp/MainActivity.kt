@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
-
+import android.media.MediaPlayer
 class MainActivity : AppCompatActivity() {
 
 
@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var option3:Button
     lateinit var option4:Button
 
-
-
+    private var mp: MediaPlayer? = null
+    private var booPlayer : MediaPlayer? = null
 
     private var backPressedTime: Long = 0
     private var backToast: Toast? = null
@@ -49,8 +49,10 @@ class MainActivity : AppCompatActivity() {
         option3=findViewById(R.id.option3)
         option4=findViewById(R.id.option4)
 
+        mp = MediaPlayer.create(this, R.raw.kachow)
+        mp?.setVolume(1.0F,1.0F)
 
-
+        booPlayer = MediaPlayer.create(this,R.raw.boo)
 
         questionsList= ArrayList()
         questionsList.add(QuestionModel("What was the highest-grossing movie of the past year?","Avengers: Endgame","Spider-Man: No Way Home","Barbie"," Oppenheimer","Barbie"))
@@ -141,7 +143,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun correctAns(option: Button){
         option.background=getDrawable(R.drawable.right_bg)
-
+        mp?.start()
         correctAnswerCount++
 
 
@@ -150,7 +152,7 @@ class MainActivity : AppCompatActivity() {
     private fun wrongAns(option:Button){
 
         option.background=resources.getDrawable(R.drawable.wrong_bg)
-
+        booPlayer?.start()
         wrongAnswerCount++
 
 

@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
+
 class ResultActivity : AppCompatActivity() {
 
     lateinit var correctAns:TextView
@@ -14,6 +15,7 @@ class ResultActivity : AppCompatActivity() {
     lateinit var performance:TextView
     lateinit var output:LinearLayout
     lateinit var back_home: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
